@@ -1,0 +1,26 @@
+Solr Output Description of Fields
+applicant				| Name of Filer
+applicant_sort			| Field used for Sorting of Name of Filer
+author					| Attorney / Author Name
+author_sort				| Filed used for Sorting of Attorney / Author Name
+brief					| Indicate if the comment was a Express Comment or not
+city					| City
+daNumber				| FCC / Designated Authority Number (Only FCC Filings)
+dateCommentPeriod		| Date Comment Period End
+dateRcpt				| Date Filing was Received (Next Business Day if Weekend)
+disseminated			| Date Filing was Disseminated out to Public
+exParte					| If it is an ExParte Presentation or not
+fileNumber				| File Number
+id						| Id of the Filing, used to look up the Filing online http://apps.fcc.gov/ecfs/comment/view?id={id}
+lawfirm					| Lawfirm Name (FCC reserved for FCC Filings)
+lawfirm_sort			| Filed used for Sorting of Lawfirm Name
+modified				| Last Date of Modification on the Record
+pages					| Number of pages of the Filing
+proceeding				| Proceeding Name of the Filing, used to look the Proceeding online http://apps.fcc.gov/ecfs/proceeding/view?name={proceeding}
+regFlexAnalysis			| No Longer Used
+smallBusinessImpact		| Indicator if Small Business Impact
+stateCd					| State Code
+submissionType			| Type of Filing
+text					| Related Comments
+viewingStatus			| Viewing Status (Unrestricted, Correspondence, Sunshine, Confidential text will not be present)
+zip						| Zip

@@ -1,0 +1,77 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified">
+	<xs:element name="response">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="lst">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="int" maxOccurs="unbounded" minOccurs="0">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:short">
+											<xs:attribute type="xs:string" name="name" use="optional"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="lst">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="str" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute type="xs:string" name="name" use="optional"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute type="xs:string" name="name"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute type="xs:string" name="name"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="result">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="doc" maxOccurs="unbounded" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="float">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:float">
+														<xs:attribute type="xs:string" name="name" use="optional"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="arr" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element type="xs:string" name="str" minOccurs="0"/>
+													<xs:element type="xs:string" name="bool" minOccurs="0"/>
+													<xs:element type="xs:dateTime" name="date" minOccurs="0"/>
+													<xs:element type="xs:long" name="long" minOccurs="0"/>
+													<xs:element type="xs:byte" name="int" minOccurs="0"/>
+												</xs:sequence>
+												<xs:attribute type="xs:string" name="name" use="optional"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute type="xs:string" name="name"/>
+						<xs:attribute type="xs:int" name="numFound"/>
+						<xs:attribute type="xs:int" name="start"/>
+						<xs:attribute type="xs:float" name="maxScore"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
