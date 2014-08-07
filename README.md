@@ -1,16 +1,18 @@
-**IF you're looking at this now, I'm currently doing some maintenance to deal with github file limits**
-
 netNeutrality
 =============
 
 A repo to hold the XML the [FCC released]. 
 
-Note that the 1st is tarred because of github file size limits. 
+Note that the datasets are in the data directory and are gzipped. You might ask
+yourself, why are they gzipped? git is made to compress and send the txt/source
+files in the best way! 
 
-Obligatory [xkcd] ( use `tar -xzvf 14-28-RAW-Solr-1.xml.tar.gz` )
+well. Github has file limits my friend, and 100MB of data is it and we can't go
+past that. Also, my internet connection kicks out when trying to push things that
+are more than 70MB or so up to the cloud. So therefore, you get gzipped fileds. 
+To unzip them simply use the `gzip -d` command.
 
 
 
 
 [FCC released]:http://www.fcc.gov/files/ecfs/14-28/ecfs-files.htm
-[xkcd]:http://xkcd.com/1168/
