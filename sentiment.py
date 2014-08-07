@@ -11,8 +11,8 @@ from nltk.corpus import movie_reviews
 datafiles = [
 	"14-28-RAW-Solr-1.xml",
 	"14-28-RAW-Solr-2.xml",
-	"14-28-RAW-Solr-3.xml"
-	"14-28-RAW-Solr-4.xml"
+	"14-28-RAW-Solr-3.xml",
+	"14-28-RAW-Solr-4.xml",
 	"14-28-RAW-Solr-5.xml"
 ]
 
@@ -46,15 +46,19 @@ def main():
 	classifier = trainNaiveClassifier()
 	doms = []
 	for datafile in datafiles:
-		print "Reading data file: {}".format(datafile)
-		doms.append( etree.parse("{}/{}".format(datadir,datafile) ) )
-		break #break for now until we figure out how to deal with xml file 2
-	
-	for dom in doms:
+		dom = None
+		print "Reading data file: {}/{}".format(datadir,datafile)
+		try:
+			dom = etree.parse("{}/{}".format(datadir,datafile) )
+		except Exception, e:
+			print e
+		if not dom:
+			continue
+
 		comments = dom.getroot().getchildren()[1]
 		for comment in comments:
-			print classifier.classify(  word_feats(comment.xpath("arr[@name = 'text']/str")[0]) )
-
+			print classifier.classify(  word_feats(comment.xpath("arr[@name = 'text']/str")[0].text) )
+	
 
 if __name__ == "__main__":
 	main()
