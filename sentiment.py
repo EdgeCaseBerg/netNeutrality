@@ -11,7 +11,8 @@ from nltk.corpus import movie_reviews
 datafiles = [
 	"14-28-RAW-Solr-1.xml",
 	"14-28-RAW-Solr-2.xml",
-	"14-28-RAW-Solr-3.xml",
+	"14-28-RAW-Solr-3a.xml",
+	"14-28-RAW-Solr-3b.xml",
 	"14-28-RAW-Solr-4.xml",
 	"14-28-RAW-Solr-5.xml"
 ]
