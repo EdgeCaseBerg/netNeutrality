@@ -26,6 +26,14 @@
 			header p{
 				margin-top: 5px;
 			}
+			h3[name="more"]{
+				padding: 5px;
+				margin: 0 auto;
+				width: 100%;
+				text-align: center;
+				background-color: black;
+				color: white;
+			}
 			section{
 				vertical-align: top;
 				display: inline-block;
@@ -48,23 +56,28 @@
 				statistics about the <a href="http://www.fcc.gov/files/ecfs/14-28/ecfs-files.htm">FCC's released comments archive</a>.
 			</p>
 		</header>
+		<h3 name="more">More Data Coming soon!</h3>
 		<section name="sentiment">
 			<h2>Sentiment Analysis with <a href="https://github.com/EJEHardenberg/netNeutrality/blob/master/sentiment.py">Python</a></h2>
-			<p>
-				Using <a href="http://www.nltk.org">nltk</a> a python natural language toolkit, I used the movie_review text classifier (73-80% accuracy, same as a human) to guage the positive and negative wordings of the comments made by people to the FCC.
-				Unsurprisingly, most of them are negative as a great many people who have written in want <strong>real</strong>Net  Neutrality.
-			</p>
 			<p>
 				Positive Wordings are listed in <span style="color: blue;">blue<br/>
 				Negative Wordings are listed in <span style="color:  red;">red</span>
 			</p>
 			<canvas width="300px" height="400px" data-pos="" data-neg="215964" id="sentimentpie"></canvas>
+			<p>
+				Using <a href="http://www.nltk.org">nltk</a> a python natural language toolkit, I used the movie_review text classifier (73-80% accuracy, same as a human) to guage the positive and negative wordings of the comments made by people to the FCC.
+				Unsurprisingly, most of them are negative as a great many people who have written in want <strong>real</strong> Net  Neutrality.
+			</p>
+			
 		</section>
 		<section name="demograph">
 			<h2>Demographic Analysis with <a href="https://github.com/EJEHardenberg/netNeutrality/blob/master/sentiment.py">Python lxml</a></h2>
 			<div id="usmap" style="width: 500; height: 400px;"></div>
+			<p>
+				Using the parser lxml, I aggregated all the state information to get an overall count of participation by state. Simple stuff, but informative. Unsurprisingly, California (the biggest tech hub) was the most vocal in protest.
+			</p>
 		</section>
-		<h3>More Data Coming soon!</h3>
+		
 	</body>
 	
 	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/Chart.js/0.2.0/Chart.min.js"></script>
